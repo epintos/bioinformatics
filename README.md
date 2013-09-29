@@ -1,4 +1,4 @@
-Bioinformatic
+Bioinformatics
 =============
 
-First project for Bioinformatic course at ITBA. Year 2013.
+First project for Bioinformatics course at ITBA. Year 2013.
