@@ -1,2 +1,68 @@
->GQ427146
-aaggcagtcgttcatttgctttctttcaaatatacagatataatccatggagttgaacttagcaccaaagtttgcacaaaagatcttcgaaggagaaggtggaacatattaccgttggtcaagtgctgaatatgaattgctcaaggaagcaaaggttggtggtggaaggcttgttctgcagcctcgtggcttcgctctccctcactatgctgactccaacagaattggttatgttcttcaaggcagctgtggagtagttggaatcgtaccacccaaagcatcccaagaagtggtgttgaggctcaagaaaggagatataataccagtgccctctggagcagtttcatggtggtacaatgatggagactcagaactaattgtcgtattccttggtgaaacttccaaggcttatgttcccggagaattcacaaacttcctactaaccggaactcaaggaatccttggaggtttttccactgaatttaactccagagcctatgatatcaacaacgaagaagccaaaaagcttgcaaaaagccaatctggcgtcttgataattaagctaccagagggccacaaaatgccccacccctgcaagaacagtactgataaattggtgtttaatattgatgctgcattacctgatatccatgtccaaaatgctggattgcttactgcattgacagcaaagaagtttcccttccttggagaagttgggctcagcgccacccttgtgaagctggatgccaatgccctgtcctcaccgatgtacgctgctgattcgtcggttcaagtaatttatgttgcaaaagggagtggaaggattcaagttgttggtatcaatggtgaacgtgccttggacacgaaagtgaaggctggtcacttgcttgttgtgccaaggttctttgtggcttctgccattgcagatggtgaaggaatggagtacttctcattgataacagctacaggacctgtatttagcgaatttactgggaaaacatcagtatggggagcattatctccacatgttttacaggcctctctcaatgtggctccagagtttgagcagcttttcagggcaaagatcaaaaagagcaccattcttgttcctccacagaactagattgattaataacaggagttacagggcccttat
+LOCUS       GQ427146                1156 bp    mRNA    linear   PLN 10-MAR-2010
+DEFINITION  Vitis berlandieri x Vitis riparia globulin mRNA, complete cds.
+ACCESSION   GQ427146
+VERSION     GQ427146.1  GI:290578588
+KEYWORDS    .
+SOURCE      Vitis cinerea var. helleri x Vitis riparia
+  ORGANISM  Vitis cinerea var. helleri x Vitis riparia
+            Eukaryota; Viridiplantae; Streptophyta; Embryophyta; Tracheophyta;
+            Spermatophyta; Magnoliophyta; eudicotyledons; core eudicotyledons;
+            rosids; Vitales; Vitaceae; Vitis.
+REFERENCE   1  (bases 1 to 1156)
+  AUTHORS   Perazzolli,M., Bampi,F., Faccin,S., Moser,M., De Luca,F.,
+            Ciccotti,A.M., Velasco,R., Gessler,C., Pertot,I. and Moser,C.
+  TITLE     Armillaria mellea Induces a Set of Defense Genes in Grapevine Roots
+            and One of Them Codifies a Protein with Antifungal Activity
+  JOURNAL   Mol. Plant Microbe Interact. 23 (4), 485-496 (2010)
+   PUBMED   20192835
+REFERENCE   2  (bases 1 to 1156)
+  AUTHORS   Perazzolli,M., Bampi,F., Faccin,S., Moser,M., De Luca,F.,
+            Ciccotti,A.M., Velasco,R., Gessler,C., Pertot,I. and Moser,C.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (30-JUL-2009) Genomics and Crop Biology Area, IASMA
+            Research and Innovation Centre, Fondazione Edmund Mach, Via E. Mach
+            1,, S. Michele a/Adige, Trento 38010, Italy
+FEATURES             Location/Qualifiers
+     source          1..1156
+                     /organism="Vitis cinerea var. helleri x Vitis riparia"
+                     /mol_type="mRNA"
+                     /cultivar="Kober 5BB"
+                     /isolation_source="plant inoculated with Armillaria
+                     mellea"
+                     /db_xref="taxon:152274"
+                     /tissue_type="rootstock roots"
+     CDS             47..1123
+                     /note="upregulated 24 hours after inoculation"
+                     /codon_start=1
+                     /product="globulin"
+                     /protein_id="ADD51189.1"
+                     /db_xref="GI:290578589"
+                     /translation="MELNLAPKFAQKIFEGEGGTYYRWSSAEYELLKEAKVGGGRLVL
+                     QPRGFALPHYADSNRIGYVLQGSCGVVGIVPPKASQEVVLRLKKGDIIPVPSGAVSWW
+                     YNDGDSELIVVFLGETSKAYVPGEFTNFLLTGTQGILGGFSTEFNSRAYDINNEEAKK
+                     LAKSQSGVLIIKLPEGHKMPHPCKNSTDKLVFNIDAALPDIHVQNAGLLTALTAKKFP
+                     FLGEVGLSATLVKLDANALSSPMYAADSSVQVIYVAKGSGRIQVVGINGERALDTKVK
+                     AGHLLVVPRFFVASAIADGEGMEYFSLITATGPVFSEFTGKTSVWGALSPHVLQASLN
+                     VAPEFEQLFRAKIKKSTILVPPQN"
+ORIGIN      
+        1 aaggcagtcg ttcatttgct ttctttcaaa tatacagata taatccatgg agttgaactt
+       61 agcaccaaag tttgcacaaa agatcttcga aggagaaggt ggaacatatt accgttggtc
+      121 aagtgctgaa tatgaattgc tcaaggaagc aaaggttggt ggtggaaggc ttgttctgca
+      181 gcctcgtggc ttcgctctcc ctcactatgc tgactccaac agaattggtt atgttcttca
+      241 aggcagctgt ggagtagttg gaatcgtacc acccaaagca tcccaagaag tggtgttgag
+      301 gctcaagaaa ggagatataa taccagtgcc ctctggagca gtttcatggt ggtacaatga
+      361 tggagactca gaactaattg tcgtattcct tggtgaaact tccaaggctt atgttcccgg
+      421 agaattcaca aacttcctac taaccggaac tcaaggaatc cttggaggtt tttccactga
+      481 atttaactcc agagcctatg atatcaacaa cgaagaagcc aaaaagcttg caaaaagcca
+      541 atctggcgtc ttgataatta agctaccaga gggccacaaa atgccccacc cctgcaagaa
+      601 cagtactgat aaattggtgt ttaatattga tgctgcatta cctgatatcc atgtccaaaa
+      661 tgctggattg cttactgcat tgacagcaaa gaagtttccc ttccttggag aagttgggct
+      721 cagcgccacc cttgtgaagc tggatgccaa tgccctgtcc tcaccgatgt acgctgctga
+      781 ttcgtcggtt caagtaattt atgttgcaaa agggagtgga aggattcaag ttgttggtat
+      841 caatggtgaa cgtgccttgg acacgaaagt gaaggctggt cacttgcttg ttgtgccaag
+      901 gttctttgtg gcttctgcca ttgcagatgg tgaaggaatg gagtacttct cattgataac
+      961 agctacagga cctgtattta gcgaatttac tgggaaaaca tcagtatggg gagcattatc
+     1021 tccacatgtt ttacaggcct ctctcaatgt ggctccagag tttgagcagc ttttcagggc
+     1081 aaagatcaaa aagagcacca ttcttgttcc tccacagaac tagattgatt aataacagga
+     1141 gttacagggc ccttat
+//

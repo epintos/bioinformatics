@@ -11,8 +11,7 @@ entries = Bio::FlatFile.auto(ARGF)
 entries.each do |entry|
   name = entry.entry_id
   seq  = entry.naseq     # use aaseq method in the case of protein database
-  # new_file = File.new(ARGF.filename.to_s, "w+") 
-  # new_file << seq.to_fasta(name)
-  # new_file.close
-  puts seq.to_fasta(name)
+  new_file = File.open("outputs/exercise1.fas", "w+") 
+  new_file << seq.to_fasta(name)
+  new_file.close
 end
