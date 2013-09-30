@@ -1,0 +1,83 @@
+LOCUS       MZEGLB1SA               2003 bp    mRNA    linear   PLN 27-APR-1993
+DEFINITION  Maize embryo globulin S allele (7S-like) mRNA, complete cds.
+ACCESSION   M24845
+VERSION     M24845.1  GI:168480
+KEYWORDS    globulin.
+SOURCE      Zea mays
+  ORGANISM  Zea mays
+            Eukaryota; Viridiplantae; Streptophyta; Embryophyta; Tracheophyta;
+            Spermatophyta; Magnoliophyta; Liliopsida; Poales; Poaceae; PACMAD
+            clade; Panicoideae; Andropogoneae; Zea.
+REFERENCE   1  (bases 1 to 2003)
+  AUTHORS   Belanger,F.C. and Kriz,A.L.
+  TITLE     Molecular Characterization of the Major Maize Embryo Globulin
+            Encoded by the Glb1 Gene
+  JOURNAL   Plant Physiol. 91 (2), 636-643 (1989)
+   PUBMED   16667080
+COMMENT     Original source text: Maize (inbred line Va26) 27 DAP embryos, cDNA
+            to mRNA, clone pcGlb1S.
+            Draft entry and computer-readable sequence for [1] kindly provided
+            by A.L.Kriz, 16-MAY-1989.
+FEATURES             Location/Qualifiers
+     source          1..2003
+                     /organism="Zea mays"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:4577"
+     mRNA            <1..2003
+                     /note="GLB1"
+     CDS             37..1758
+                     /note="globulin precursor"
+                     /codon_start=1
+                     /protein_id="AAA33467.1"
+                     /db_xref="GI:168481"
+                     /translation="MVSARIVVLLAVLLCAAAAVASSWEDDNHHHHGGHKSGRCVRRC
+                     EDRPWHQRPRCLEQCREEEREKRQERSRHEADDRSGEGSSEDEREREQEKEEKQKDRR
+                     PYVFDRRSFRRVVRSEQGSLRVLRPFDEVSRLLRGIRDYRVAVLEANPRSFVVPSHTD
+                     AHCIGYVAEGEGVVTTIENGERRSYTIKQGHVFVAPAGAVTYLANTDGRKKLVITKIL
+                     HTISVPGEFQFFFGPGGRNPESFLSSFSKSIQRAAYKTSSDRLERLFGRHGQDKGIIV
+                     RATEEQTRELRRHASEGGHGPHWPLPPFGESRGPYSLLDQRPSIANQHGQLYEADARS
+                     FHDLAEHDVSVSFANITAGSMSAPLYNTRSFKIAYVPNGKGYAEIVCPHRQSQGGESE
+                     RERGKGRRSEEEEESSEEQEEVGQGYHTIRARLSPGTAFVVPAGHPFVAVASRDSNLQ
+                     IVCFEVHADRNEKVFLAGADNVLQKLDRVAKALSFASKAEEVDEVLGSRREKGFLPGP
+                     KESGGHEEREQEEEEREERHGGRGERERHGREEREKEEEEREGRHGRGRREEVAETLL
+                     RMVTARM"
+     sig_peptide     37..90
+                     /note="globulin signal peptide"
+     mat_peptide     295..1755
+                     /product="globulin"
+ORIGIN      
+        1 cgcacacacc cgagcatatc acagtgacac tacacgatgg tgagcgccag aatcgttgtc
+       61 ctcctcgccg tcctcctatg cgctgccgcc gcagtcgcgt cgtcctggga ggacgacaac
+      121 caccaccacc acgggggcca caagtccggg cgatgcgtgc ggcggtgcga ggaccggccc
+      181 tggcaccagc gcccccggtg cctggagcag tgcagggagg aggagcggga gaagcggcaa
+      241 gagcggagca ggcacgaggc cgacgaccgc agcggcgagg gctcgtcgga ggatgagcgc
+      301 gagcgcgagc aggagaagga ggagaagcag aaggaccggc ggccgtacgt gttcgaccgg
+      361 cgcagctttc gtcgcgtggt ccggagcgag caggggtccc tgagggtgct ccggccgttc
+      421 gacgaggtgt ccaggctcct ccgcggcatc cgggactacc gcgtggcggt cctggaggcg
+      481 aacccgcgct cgttcgtggt gcccagccac accgacgcgc actgcatcgg ctacgtggcg
+      541 gaaggcgagg gagtggtgac gacgatcgag aacggcgaga ggcggtcgta caccatcaag
+      601 caaggccacg tcttcgtggc gccggccggg gcggtcacct acctggccaa caccgacggc
+      661 cggaagaaac tggtcatcac caagatcctc cataccatct ccgtgcctgg cgagttccag
+      721 ttcttcttcg gccccggcgg gaggaacccg gaatcgttcc tgtcgagctt cagcaagagc
+      781 atccagagag ctgcgtacaa gacctcgagc gaccggctgg agaggctgtt cgggaggcat
+      841 gggcaggaca aggggatcat cgtgcgtgcc acggaggagc agacccgcga gctgcggcgc
+      901 cacgcctcgg agggcggcca cggcccgcac tggcccctgc cgccgttcgg cgagtcgcgc
+      961 ggcccctaca gcctcctgga ccagcggccc agcatcgcca accagcacgg gcagctctac
+     1021 gaggccgacg cgcgcagctt ccacgacctc gccgagcacg acgtcagcgt ctccttcgcc
+     1081 aacatcaccg cggggtccat gagcgcgcca ttgtacaaca cccgttcgtt caagatcgcc
+     1141 tacgtgccga acggcaaggg ctacgccgag atcgtgtgcc cgcaccgcca gtcgcagggc
+     1201 ggcgagagcg agcgcgagcg cggcaagggc aggaggagcg aagaagaaga agaatcgtct
+     1261 gaggagcagg aggaagtcgg gcaggggtac cacaccatcc gggcgcggct gtcaccgggc
+     1321 acggcgttcg tggtgcccgc gggccacccg ttcgtcgcgg tggcgtcccg ggacagcaac
+     1381 ctccagatcg tgtgcttcga ggtccacgcc gacaggaacg agaaggtgtt cctggccggc
+     1441 gccgacaacg tgctgcagaa gctcgaccgg gtcgccaagg cgctgtcatt cgcctccaag
+     1501 gcggaggagg tggacgaggt gctcggctcg cggcgcgaga aggggttcct tcctggcccc
+     1561 aaggagagcg gcggccacga ggagcgggag caggaggagg aggaacgcga agaacgccac
+     1621 ggcgggcgtg gggagaggga acgccacgga cgtgaggagc gggagaaaga ggaggaggaa
+     1681 cgcgaaggac gccacggccg cgggcgccgc gaggaagtgg cggagacgct cctgaggatg
+     1741 gtgaccgcca ggatgtgagg ccggccgtgc tcgccaaaac gagcaggaag caacgagagg
+     1801 gtggcgcgcg accgacgtgc gtacgtagca tgagcctgag tggagacgtt ggacgtgtat
+     1861 gtatatacct ctctgcgtgt taactatgta cgtaagcggc aggcagtgca ataagtgtgg
+     1921 ctctgtagta tgtacgtgcg ggtacgatgc tgtaagctac tgaggcaagt ccataaataa
+     1981 ataatgacac gtgcgtgttc tat
+//
