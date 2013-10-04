@@ -1,64 +1,46 @@
 #!/usr/bin/env ruby
 
 puts 'Exercise 2'
-# sudo makeblastdb -in ../data/swissprot.fasta -out ../data/swissprot -dbtype nucl
 require 'bio'
+require 'rubygems'
 
-# Bio::Blast.reports(ARGF) do |report|
-#   puts "Hits for " + report.query_def + " against " + report.db
-#   # report.each do |hit|
-#     # print hit.target_id, " -> ", hit.evalue if hit.evalue < 0.001
-#   # end
-# end
 
-blast_factory = Bio::Blast.new('blastn','dbsts', '-e 0.0001 -r 4', 'genomenet')
-# result = blast_factory.query
-# ('DIADIIRGKDLYLGDQERKQHLEKRLETMFEKIQKNNNNKLSNLSTKEVREYWWALNRDQVWKAITCDAGAADEYFKKSGKLEFEFTGGQCGRDGENVPTYLDYVPQFFR')
+ seq = Bio::Sequence::AA.new('GLSDGEWELVLKTWGKVEADIPGHGETVFVRLFTGHPETLEKFDKFKHLKTEGEMKASEDLKKQGVTVLT
+ALGGILKKKGHHEAEIQPLAQSHATKHKIPIKYLEFISDAIIHVLQSKHPAEFGADAQGAMKKALELFRN
+DIAAKYKELGFQG')
 
-#  result.each do |hit|
-#       puts hit.bit_score        # bit score (*)
-#       puts hit.query_seq        # query sequence (TRANSLATOR'S NOTE:
-# sequence of homologous region of query sequence)
-#       puts hit.midline          # middle line string of alignment of
-# homologous region (*)
-#       puts hit.target_seq       # hit sequence (TRANSLATOR'S NOTE: sequence
-# of homologous region of query sequence)
+#Local
+blast = Bio::Blast.local('blastp','swissprot','-m 8')
+#makeblastdb -in maize.fasta -out dbest -dbtype nucl
+#blastp -query maize.fasta -db maize -out test.html -html
+#blastn -query maize.fasta -db dbest -out test.html -html -remote
 
-#       puts hit.evalue           # E-value
-#       puts hit.identity         # % identity
-#       puts hit.overlap          # length of overlapping region
-#       puts hit.query_id         # identifier of query sequence
-#       puts hit.query_def        # definition(comment line) of query sequence
-#       puts hit.query_len        # length of query sequence
-#       puts hit.target_id        # identifier of hit sequence
-#       puts hit.target_def       # definition(comment line) of hit sequence
-#       puts hit.target_len       # length of hit sequence
-#       puts hit.query_start      # start position of homologous region in
-# query sequence
-#       puts hit.query_end        # end position of homologous region in query
-# sequence
-#       puts hit.target_start     # start position of homologous region in
-# hit(target) sequence
-#       puts hit.target_end       # end position of homologous region in
-# hit(target) sequence
-#       puts hit.lap_at           # array of above four numbers
-    # end
-# report = remote_blast_factory.query(ARGF.read)     
-# puts report                                    
-# report.each do |hit|
-#   print hit.target_id, " -> ", hit.evalue if hit.evalue < 0.001
-# end
+# Remote
+# For proteins
+# blast = Bio::Blast.remote 'blastp', 'swissprot', '-e 0.0001', 'genomenet'
 
-# example 1
-seq = Bio::Sequence::NA.new('agggcattgccccggaagatcaagtcgtgctcctg')
-report = blast_factory.query(seq)
-report.each do |hit|
-  print hit.target_id, " -> ", hit.evalue if hit.evalue < 0.001
+# For nucleic
+# blast = Bio::Blast.remote 'blastn', 'dbest', '-e 0.0001', 'genomenet'
+file = File.open("outputs/exercise2.out", "w+") 
+  
+report = blast.query(seq)
+if !report.nil?
+  report.hits.each_with_index do |hit, hit_index|
+    file.puts '------------------------------------------------'
+    file.puts "Hit #{hit_index}"
+    file.puts hit.accession  
+    file.puts hit.definition
+    file.puts " - Query length: #{hit.len}"
+    file.puts " - Number of identities: #{hit.identity}"
+    file.puts " - Length of Overlapping region: #{hit.overlap}"
+    file.puts " - % Overlapping: #{hit.percent_identity}"
+    file.puts " - Query sequence: #{hit.query_seq}"
+    file.puts " - Subject sequence: #{hit.target_seq}"
+    hit.hsps.each_with_index do |hsps, hsps_index|
+      file.puts " - Bit score: #{hsps.bit_score}"
+      file.puts " - Gaps: #{hsps.gaps}"
+    end
+  end
 end
-# example 2
-# str <<END_OF_FASTA
-# >lcl|MySequence
-# MPPSAISKISNSTTPQVQSSSAPNLTMLEGKGISVEKSFRVYSEEENQNQHKAKDSLGF
-# KELEKDAIKNSKQDKKDHKNWLETLYDQAEQKWLQEPKKKLQDLIKNSGDNSRVILKDS
-# END_OF_FASTA
-# report = blast_factory.query(str)
+
+file.close
