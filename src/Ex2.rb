@@ -10,14 +10,14 @@ ALGGILKKKGHHEAEIQPLAQSHATKHKIPIKYLEFISDAIIHVLQSKHPAEFGADAQGAMKKALELFRN
 DIAAKYKELGFQG')
 
 #Local
-blast = Bio::Blast.local('blastp','swissprot','-m 8')
+# blast = Bio::Blast.local('blastp','swissprot','-m 8')
 #makeblastdb -in maize.fasta -out dbest -dbtype nucl
 #blastp -query maize.fasta -db maize -out test.html -html
 #blastn -query maize.fasta -db dbest -out test.html -html -remote
 
 # Remote
 # For proteins
-# blast = Bio::Blast.remote 'blastp', 'swissprot', '-e 0.0001', 'genomenet'
+blast = Bio::Blast.remote 'blastp', 'swissprot', '-e 0.0001', 'genomenet'
 
 # For nucleic
 # blast = Bio::Blast.remote 'blastn', 'dbest', '-e 0.0001', 'genomenet'
