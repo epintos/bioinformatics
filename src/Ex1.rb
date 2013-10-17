@@ -1,17 +1,18 @@
 #!/usr/bin/env ruby
 
-puts 'Exercise 1'
-
 require 'bio'
 
-# read the sequence entry by entry through the files listed in ARGV.
-entries = Bio::FlatFile.auto(ARGF)
+if ARGV.length != 2
+  puts 'Invalid params: 1) In file path - 2) Out file path'
+  exit
+end
 
-# iterates on each entry to print the fasta formated string.
-entries.each do |entry|
-  name = entry.entry_id
-  seq  = entry.naseq     # use aaseq method in the case of protein database
-  new_file = File.open("outputs/exercise1.fas", "w+") 
-  new_file << seq.to_fasta(name)
-  new_file.close
+#Parses the GenBank input file
+entries = Bio::GenBank.open(ARGV[0])
+
+#Creates the new file and writes the fasta output
+File.open(ARGV[1], 'w') do |f|
+  entries.each_entry do |entry|
+    f.write(entry.to_biosequence.output_fasta)
+  end
 end
