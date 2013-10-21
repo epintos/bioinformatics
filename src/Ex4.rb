@@ -1,15 +1,14 @@
 #!/usr/bin/env ruby
 
-puts 'Exercise 4'
-
 require 'bio'
 
+if ARGV.length != 1
+  puts 'Invalid params: 1) In file path'
+  exit
+end
 
-obj_A = Bio::EMBOSS.new('transeq -sbegin 110 -send 1171 embl:xlrhodop')
-puts obj_A.result                   #=> nil
-obj_A.exec
-puts obj_A.result                   #=> a FASTA-formatted sequence
-
-obj_B = Bio::EMBOSS.new('showfeat embl:xlrhodop')
-obj_B.exec
-puts obj_B.result
+File.open(ARGV[0], 'w') do |f|
+  f.puts Bio::EMBOSS.run('water',
+                          '-asequence', 'swissprot:slpi_human',
+                          '-bsequence', 'swissprot:slpi_mouse')
+end
