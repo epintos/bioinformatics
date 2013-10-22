@@ -13,12 +13,11 @@ Instructions
   * Example: `ruby src/Ex1.rb files/genbank/tritricum_globulin.gbk outputs/Ex1.fas`
 
 * `Ex2.rb` Generates a Blast report from a Fasta file
-  * `ruby src/Ex2.rb input_file_path output_file_path type local_or_remote`
+  * `ruby src/Ex2.rb input_file_path output_file_path type`
   * `input_file_path` is the file path for the fasta input file
   * `output_file_path` is the file path for the blast report output file
   * `type` is either `--prot` or `--nuc`
-  * `local_or_remote` is either `--local` or `--remote`
-  * Example: `ruby src/Ex2.rb files/fasta/maize_globulin.fas outputs/Ex2.out --nuc --remote`
+  * Example: `ruby src/Ex2.rb files/fasta/maize_globulin.fas outputs/Ex2.out --nuc`
 
 * `Ex3.rb` Parses a Blast report and shows the hits that matches a pattern. 
   * `ruby src/Ex3.rb input_file_path output_file_path pattern type`
@@ -31,8 +30,10 @@ Instructions
 * `Ex4.rb` Runs the EMBOSS Water command for two proteins.
   * `ruby src/Ex4.rb output_file_path`
   * `output_file_path` is the file path for the water command result output file
-  * Example: `ruby src/Ex4.rb outputs/Ex4.out`
   * For OSX EMBOSS installation `http://nodens.ceab.csic.es/t-rfpred/mac#EMB`
+  * Example: `ruby src/Ex4.rb outputs/Ex4.out`
 
-
+* `files` folder contains `blast`, `fasta` and `genbank` example input files
+* `outputs` folder contains some output example files
+* `src` folder contains the different scripts
   

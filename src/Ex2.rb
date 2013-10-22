@@ -2,35 +2,17 @@
 
 require 'bio'
 
-if ARGV.length != 4
-  puts 'Invalid params: 1) In file path - 2) Out file path - 3) Type ( --prot or --nuc ) - 4) Local or Remote ( --local or -- remote)'
+if ARGV.length != 3
+  puts 'Invalid params: 1) In file path - 2) Out file path - 3) Type ( --prot or --nuc )'
   exit
 end
 
-#makeblastdb -in maize.fasta -out dbest -dbtype nucl
-#blastn -query maize.fasta -db dbest -out test.html -html -remote
-#blastp -query maize.fasta -db maize -out test.html -html
-
 type = ARGV[2]
-local_or_remote = ARGV[3]
+
 if type.eql?('--prot')
-  if local_or_remote.eql?('--local')
-    blast = Bio::Blast.local('blastp','swissprot','-m 8')
-    
-  elsif local_or_remote.eql?('--remote')
-    blast = Bio::Blast.remote 'blastp', 'swissprot', '-e 0.0001', 'genomenet'
-  else
-    puts 'Posible options are --local and --remote'
-  end
+    blast = Bio::Blast.remote('blastp', 'swissprot', '-e 0.0001', 'genomenet')
 elsif type.eql?('--nuc')
-  if local_or_remote.eql?('--local')
-    blast = Bio::Blast.local('blastn','dbest','-m 8')
-    
-  elsif local_or_remote.eql?('--remote')
-    blast = Bio::Blast.remote 'blastn', 'dbest', '-e 0.0001', 'genomenet'
-  else
-    puts 'Posible options are --local and --remote'
-  end
+    blast = Bio::Blast.remote('blastn', 'dbest', '-e 0.0001', 'genomenet')
 else
   puts 'Possible types are --prot and --nuc'
   exit

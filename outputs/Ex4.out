@@ -1,0 +1,45 @@
+########################################
+# Program: water
+# Rundate: Tue 22 Oct 2013 20:14:26
+# Commandline: water
+#    -asequence swissprot:slpi_human
+#    -bsequence swissprot:slpi_mouse
+#    -auto
+#    -stdout
+# Align_format: srspair
+# Report_file: stdout
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: SLPI_HUMAN
+# 2: SLPI_MOUSE
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 132
+# Identity:      79/132 (59.8%)
+# Similarity:    96/132 (72.7%)
+# Gaps:           3/132 ( 2.3%)
+# Score: 464.5
+# 
+#
+#=======================================
+
+SLPI_HUMAN         1 MKSSGLFPFLVLLALGTLAPWAVEGSGK--SFKAGVCPPKKSAQCLRYKK     48
+                     |||.||.||.||||||.||||.||| ||  :.|.|.||.||.||||:.:|
+SLPI_MOUSE         1 MKSCGLLPFTVLLALGILAPWTVEG-GKNDAIKIGACPAKKPAQCLKLEK     49
+
+SLPI_HUMAN        49 PECQSDWQCPGKKRCCPDTCGIKCLDPVDTPNPTRRKPGKCPVTYGQCLM     98
+                     |:|::||:||||:|||.|.||.||::||....|..||||:|..|..:|:|
+SLPI_MOUSE        50 PQCRTDWECPGKQRCCQDACGSKCVNPVPIRKPVWRKPGRCVKTQARCMM     99
+
+SLPI_HUMAN        99 LNPPNFCEMDGQCKRDLKCCMGMCGKSCVSPV    130
+                     |||||.|:.||||....|||.|:|||.|:.|:
+SLPI_MOUSE       100 LNPPNVCQRDGQCDGKYKCCEGICGKVCLPPM    131
+
+
+#---------------------------------------
+#---------------------------------------
